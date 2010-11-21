@@ -1,0 +1,9 @@
+*~
+*.bak
+.DS_Store
+*.swo
+*.swp
+.*.swp
+.*.swo
+.*.bak
+!.gitignore

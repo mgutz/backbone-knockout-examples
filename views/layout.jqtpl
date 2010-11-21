@@ -1,0 +1,15 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>${title}</title>
+    <script src="js/jquery-1.4.4.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/jquery.tmpl.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/underscore-1.1.0.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/backbone.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+    <h1>${title} Example</h1>
+    {{html body}}
+</body>
+</html>
