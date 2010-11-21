@@ -1,0 +1,57 @@
+<h1>Hello World Example</h1>
+
+<div id='content'>
+    <p>First name: <input class='first-name' value='Planet'></input></p>
+    <p>Last name: <input class='last-name' value='Earth'/></p>
+    <h2>Hello, <span class='full-name'></span>!</h2>
+</div>
+
+<script type="text/javascript">
+    /* A plain object does not fire change events when one of its properties
+       change. A model object intercepts changes in property values and
+       fires change events. As a consequence, use get/set to change property
+       values.
+       */
+    var Person = Backbone.Model.extend();
+
+    var PersonView = Backbone.View.extend({
+        initialize: function() {
+            /* Ensure render callback belongs to this object. */
+            _.bindAll(this, 'render');
+
+            /* Re-render this view when the model changes */
+            this.model.bind('change', this.render);
+
+            /* Full name is empty initially. Render it using passed-in model. */
+            this.render();
+        },
+
+
+        /* Container element for the view. */
+        el: "#content",
+
+        /* Renders the view any time the model changes. */
+        render: function() {
+            var fullName = this.model.get('firstName') + ' ' + this.model.get('lastName');
+            $('.full-name', this.el).text(fullName);
+            return this;
+        },
+
+        /* Hook up events to update the model. */
+        events: {
+            'change input': 'updateModel'
+        },
+
+
+        /* Update the model when either of the input element's value changes. */
+        updateModel: function() {
+            var first = this.$('.first-name').val();
+            var last = this.$('.last-name').val();
+            this.model.set({firstName: first, lastName: last});
+        }
+    });
+
+    /* Create a view given a model. PersonView#initialize renders into PersonView#el. */
+    var green = new Person({firstName: 'Planet', lastName: 'Earth'});
+    var view = new PersonView({model: green});
+</script>

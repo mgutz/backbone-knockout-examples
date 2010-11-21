@@ -32,7 +32,7 @@ app.configure('production', function(){
 
 
 app.get('/:example', function(req, res){
-  res.render('backbone/' + req.params.example, {
+  res.render('examples/' + req.params.example, {
     locals: {
       title: req.params.example
     }

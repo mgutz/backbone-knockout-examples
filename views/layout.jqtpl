@@ -9,7 +9,6 @@
     <script src="js/backbone.js" type="text/javascript" charset="utf-8"></script>
 </head>
 <body>
-    <h1>${title} Example</h1>
     {{html body}}
 </body>
 </html>

@@ -1,0 +1,64 @@
+<h1>Click Counter Example</h1>
+
+<div>
+    <div>You've clicked <span id='numberOfClicks' >&nbsp;</span> times</div>
+
+    <button id='clickMe'>Click me</button>
+     
+    <div id='tooManyClicks'>
+        That's too many clicks! Please stop before you wear out your fingers.
+        <button>Reset clicks</button>
+    </div>
+</div>
+
+<script type="text/javascript" charset="utf-8">
+    /* Define model with initial values */
+    var Model = Backbone.Model.extend({
+      initialize: function() {
+        this.set({
+          count: 0,
+          threshold: 3
+        });
+      },
+
+      hasTooManyClicks: function() {
+        return this.get('count') >= this.get('threshold');
+      }
+    });
+
+    var View = Backbone.View.extend({
+        initialize: function() {
+            _.bindAll(this, 'render', 'incrementClickCount', 'resetCount');
+
+            this.model.bind('change', this.render);
+
+            this.render();
+        },
+
+        render: function() {
+            $('#numberOfClicks').text(this.model.get('count'));
+
+            var isTooMany = this.model.hasTooManyClicks();
+            $('#tooManyClicks').toggle(isTooMany);
+            $('#clickMe').attr('disabled', isTooMany);
+        },
+
+        events: {
+            'click #clickMe': 'incrementClickCount',
+            'click #tooManyClicks button': 'resetCount'
+        },
+
+        incrementClickCount: function() {
+          var count = this.model.get('count');
+            this.model.set({count: count + 1});
+        },
+
+        resetCount: function() {
+            this.model.set({'count': 0});
+        },
+
+        el: 'div:first'
+    });
+
+    var clickView = new View({model: new Model()});
+</script>
