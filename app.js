@@ -31,10 +31,10 @@ app.configure('production', function(){
 // Routes
 
 
-app.get('/:demo', function(req, res){
-  res.render('backbone/' + req.params.demo, {
+app.get('/:example', function(req, res){
+  res.render('backbone/' + req.params.example, {
     locals: {
-      title: req.params.demo
+      title: req.params.example
     }
   });
 });
