@@ -12,6 +12,9 @@ markup is cleaner, which facilitates integrating creative
 assets from designers. Backbone's' synchronization with RESTful services 
 could also be a plus. We'll see.
 
+Knockout's examples have too much javascript code in data attributes. Perhaps that
+is intentional to keep the examples concise. Not a good practice.
+
 ## Pre-requisites
 
 * [express](https://github.com/visionmedia/express) - awesome web framework 

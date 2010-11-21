@@ -1,14 +1,12 @@
 <h1>Click Counter Example</h1>
 
-<div>
-    <div>You've clicked <span id='numberOfClicks' >&nbsp;</span> times</div>
+<div>You've clicked <span id='numberOfClicks' >&nbsp;</span> times</div>
 
-    <button id='clickMe'>Click me</button>
-     
-    <div id='tooManyClicks'>
-        That's too many clicks! Please stop before you wear out your fingers.
-        <button>Reset clicks</button>
-    </div>
+<button id='clickMe'>Click me</button>
+ 
+<div id='tooManyClicks'>
+    That's too many clicks! Please stop before you wear out your fingers.
+    <button>Reset clicks</button>
 </div>
 
 <script type="text/javascript" charset="utf-8">
@@ -57,7 +55,7 @@
             this.model.set({'count': 0});
         },
 
-        el: 'div:first'
+        el: 'body'
     });
 
     var clickView = new View({model: new Model()});
