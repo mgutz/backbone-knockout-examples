@@ -42,7 +42,7 @@ app.get('/:demo', function(req, res){
 app.get('/', function(req, res){
   res.render('index', {
     locals: {
-      title: 'KnockoutJs Examples Using Backbone'
+      title: 'Backbone Examples Ported From Knockout'
     }
   });
 });

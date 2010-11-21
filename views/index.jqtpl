@@ -1,6 +1,10 @@
-<h1>Knockout Examples in Backbone</h1>
+<p>This project contains Knockout examples ported to Backbone. My main motivation
+is to learn enough about each to determine which framework best suits my 
+style.</p>
 
-<p>This project contains Knockout Examples ported to Backbone.</p>
+<p>My initial impression is Knockout is the more elegant framework. However,
+everything the author of Backbone has done has been pretty darn good so 
+there is likely a good reason why Backbone <em>appears</em> more complicated.</p>
 
 <ul>
     <li><a href='/hello-world'>Hello World</a></li>
