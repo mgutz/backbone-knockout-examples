@@ -20,6 +20,10 @@ could also be a plus. We'll see.
 Install both via [npm](https://github.com/isaacs/npm)
 
 
-## More Info
+## Run It
 
-TBD
+    node app.js
+
+## TODOS
+
+* Use Docco
