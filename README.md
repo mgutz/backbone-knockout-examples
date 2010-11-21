@@ -25,7 +25,8 @@ Install both via [npm](https://github.com/isaacs/npm)
 
 ## Examples Ported
 
-* Hello World
+* [Hello World](views/examples/hello-world.jqtpl)
+* [Click Counter](view/examples/click-counter.jqtpl)
 
 ## Run It
 
