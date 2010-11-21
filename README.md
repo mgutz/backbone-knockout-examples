@@ -1,9 +1,11 @@
 # Backbone Examples from Knockout
 
 This project contains [Knockout](http://knockoutjs.com) examples ported to 
-[Backbone](https://documentcloud.github.com/backbone/). My main motivation
+[Backbone](https://documentcloud.github.com/backbone/). The motivation 
 is to learn enough about each to determine which framework best suits my 
 style.
+
+## Opinion
 
 My initial impression is Knockout is the more elegant
 framework as of this writing. However, almost everything [jashkenas](https://github.com/jashkenas), 
@@ -15,7 +17,7 @@ could also be a plus. We'll see.
 Knockout's examples have too much inline javascript in data attributes. Perhaps that
 is intentional to keep the examples concise. Not sure I like that. Who knows, I'm un-learning
 a lot of things and that may be one of those compromises which makes code simpler at
-the expense of correctness.
+the expense of *architectural* correctness.
 
 ## Pre-requisites
 
@@ -23,7 +25,6 @@ the expense of correctness.
 * [jqtpl](https://github.com/kof/node-jqtpl)
 
 Install both via [npm](https://github.com/isaacs/npm)
-
 
 ## Examples Ported
 
@@ -37,3 +38,4 @@ Install both via [npm](https://github.com/isaacs/npm)
 ## TODOS
 
 * Use Docco
+* Create a Pretty Examples Site
