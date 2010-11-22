@@ -28,8 +28,9 @@ Install both via [npm](https://github.com/isaacs/npm)
 
 ## Examples Ported
 
-* [Hello World](backbone-knockout-examples/tree/master/views/examples/hello-world.jqtpl)
-* [Click Counter](backbone-knocout-examples/tree/master/views/examples/click-counter.jqtpl)
+* [Hello World](backbone-knockout-examples/tree/master/views/examples/hello-world.ejs)
+* [Click Counter](backbone-knocout-examples/tree/master/views/examples/click-counter.ejs)
+* [Simple List](backbone-knocout-examples/tree/master/views/examples/simple-list.ejs)
 
 ## Run It
 

@@ -1,0 +1,59 @@
+<h1>Simple List Example</h1>
+
+<p>
+    <a href='http://knockoutjs.com/examples/simpleList.html' target='_blank'>Knockout&apos;s Example</a>
+</p>
+
+<form id='view' onSubmit='return false'>
+    New item:
+    <input class='itemToAdd' />
+    <button disabled='true'>Add</button>
+    <p>Your items:</p>
+    <select multiple="multiple" style="width:200px;"></select>
+</form>
+
+<script type="text/javascript" charset="utf-8">
+    // ADD enable button when text length > 0
+    var items = new Backbone.Collection([
+        {name: 'Alpha'},
+        {name: 'Beta'},
+        {name: 'Gamma'}
+    ]);
+
+    var View = Backbone.View.extend({
+        initialize: function() {
+            _.bindAll(this, 'render');
+            this.collection.bind('add', this.render);
+            this.render();
+        },
+
+        el: "#view",
+
+        render: function() {
+            var val;
+            this.$('select:first').empty();
+            this.collection.each(function(item){
+                val = item.get('name');
+                this.$('select:first').append(
+                    $('<option/>').val(val).text(val)
+                );
+            });
+        },
+
+        events: {
+            'click button': 'addItem',
+            'keyup .itemToAdd': 'enableButton'
+        },
+
+        addItem: function() {
+            var val = this.$('.itemToAdd').val();
+            this.collection.add({name: val});
+        },
+
+        enableButton: function() {
+            this.$('button').attr('disabled', this.$('.itemToAdd').val().length < 1);
+        }
+    });
+
+    var viewInstance = new View({collection: items});
+</script>
