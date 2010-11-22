@@ -22,7 +22,7 @@ the expense of *architectural* correctness.
 ## Pre-requisites
 
 * [express](https://github.com/visionmedia/express) - awesome web framework 
-* [jqtpl](https://github.com/kof/node-jqtpl)
+* [ejs](https://github.com/kof/node-jqtpl)
 
 Install both via [npm](https://github.com/isaacs/npm)
 
